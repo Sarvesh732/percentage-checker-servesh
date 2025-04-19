@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Percentage Calculator</h1>
+        
+        <div class="input-container">
+            <input type="number" id="sub1" placeholder="Sub 1" max="100">
+            <input type="number" id="sub2" placeholder="Sub 2" max="100">
+            <input type="number" id="sub3" placeholder="Sub 3" max="100">
+            <input type="number" id="sub4" placeholder="Sub 4" max="100">
+            <input type="number" id="sub5" placeholder="Sub 5" max="100">
+        </div>
+
+        <button class="button" onclick="calculatePercentage()">Calculate</button>
+        
+        <div class="loading" id="loading"></div>
+        <div class="result" id="result"></div>
+        <div class="animated-bar" id="progress-bar"></div>
+
+        <p class="quote">"knowledge wisdom freedom and sprituality." - servesh somkuwar</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

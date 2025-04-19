@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #f2f2f2;
+}
+
+.container {
+    background: linear-gradient(135deg, #333, #111);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    width: 500px;
+    text-align: center;
+    position: relative;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Impact', sans-serif;
+    color: #ffcb00;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    width: 80px;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid #444;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border: 2px solid #ffcb00;
+    box-shadow: 0 0 10px #ffcb00;
+}
+
+.button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.result {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffcb00;
+}
+
+.loading {
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.quote {
+    font-size: 16px;
+    color: #d4d4d4;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.animated-bar {
+    height: 10px;
+    width: 0;
+    background-color: #ffcb00;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: progressBar 2s ease-out forwards;
+}
+
+@keyframes progressBar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .input-container {
+        margin-bottom: 15px;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .result {
+        font-size: 24px;
+    }
+
+    .loading {
+        font-size: 16px;
+    }
+}
